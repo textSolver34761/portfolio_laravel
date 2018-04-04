@@ -11,7 +11,9 @@
     </div-->
     <h1 class="text-center"> Welcome to my blog ! </h1>
     @if(!Auth::guest())
-        <a href="/articles/create" class="btn btn-default">Create Article </a>
+        @if(Auth::user()->role == 1)
+            <a href="/articles/create" class="btn btn-default">Create Article </a>
+        @endif
     @endif
         @if(count($articles) >0 )
             @foreach($articles as $article)

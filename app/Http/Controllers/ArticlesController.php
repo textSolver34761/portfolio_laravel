@@ -82,6 +82,13 @@ class ArticlesController extends Controller
     public function edit($id)
     {
         $articles = Article::find($id);
+
+        //Check correct users
+
+        if(auth()->user()->id !== $articles->user_id){
+            return redirect ('/articles')->with('error','You are not authorized !');
+        }
+
         return view ('articles.edit')->with('articles',$articles);
     }
 
@@ -118,6 +125,13 @@ class ArticlesController extends Controller
     public function destroy($id)
     {
         $articles = Article::find($id);
+
+        //Check correct users
+
+        if(auth()->user()->id !== $articles->user_id){
+            return redirect ('/articles')->with('error','You are not authorized !');
+        }
+
         $articles->delete();
         return redirect('/articles')->with('success','You have successfully deleted an article!');
     }
