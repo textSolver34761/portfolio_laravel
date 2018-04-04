@@ -4,9 +4,6 @@
 <br>
 <br>
 <title></title>
-<h1 class="center">Welcome on my personal website</h1>
-<p> This is a test <p>
-@endsection
 
 <div class="jumbotron">
         <h1 class="text-center">Welcome on my personal website</h1>
@@ -29,3 +26,4 @@
         </div>
     </div>
 </div>
+@endsection

@@ -1,4 +1,4 @@
-<footer class="footer bg-dark p-5 text-white fixed-bottom">
+<footer class="footer bg-dark p-5 text-white">
     <div class="container">
         <h4 class="text-center">Follow me on social networks:</h4>
         <div class="row">
