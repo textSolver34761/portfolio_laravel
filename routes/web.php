@@ -18,3 +18,7 @@ Route::get('/work', 'PagesController@work');
 
 
 Route::resource('articles', 'ArticlesController');
+
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@index');

@@ -60,7 +60,7 @@
       </fieldset>
       Please not that the questions marked with an asterix (*) are required. <br>
       I will only use your information to repley to you. 
-      If you want, you can have a chat with <a href=""> my bot</a>. 
+      If you want, you can have a chat with <a href="#"> my bot</a>. 
       <button type="submit" class="btn btn-default">Submit</button>
     </form>
   <div id="cf-context" class="dark-theme" role="cf-context" cf-context></div>
