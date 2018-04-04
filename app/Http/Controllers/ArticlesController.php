@@ -41,7 +41,14 @@ class ArticlesController extends Controller
             'description' => 'required',
             'content' => 'required'
         ]);
-        return 123;
+        //Save Article newly created
+        $articles = new Article;
+        $articles->title = $request->input('title');
+        $articles->description = $request->input('description');
+        $articles->content = $request->input('content');
+        $articles->save();
+
+        return redirect('/articles')->with('success','You have successfully created an article!');
     }
 
     /**

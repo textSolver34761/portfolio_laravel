@@ -10,6 +10,6 @@
     <br>
     <br>
     <div>
-        {{$articles ->content}}
+        {!!$articles ->content!!}
     </div>
 @endsection
