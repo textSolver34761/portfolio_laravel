@@ -16,7 +16,7 @@
         </div>
       </li>
       <li class="nav-item">
-          <a class="nav-link" href="/blog">Blog</a>
+          <a class="nav-link" href="/articles">Blog</a>
       </li>
       <li class="nav-item">
           <a class="nav-link" href="/work">My work</a>
