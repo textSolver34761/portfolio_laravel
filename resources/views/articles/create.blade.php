@@ -4,7 +4,7 @@
 <br>
 <br>
 <br>
-    <h1>Create article</h1>
+    <h1>Create an article</h1>
     {!! Form::open(['action' => 'ArticlesController@store', 'method' => 'post'] ) !!}
     <div class="form-group">
         {{Form::label('title','Title')}}

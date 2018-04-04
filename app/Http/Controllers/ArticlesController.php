@@ -71,7 +71,8 @@ class ArticlesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $articles = Article::find($id);
+        return view ('articles.edit')->with('articles',$articles);
     }
 
     /**
@@ -83,7 +84,19 @@ class ArticlesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required',
+            'content' => 'required'
+        ]);
+        //Save updated article
+        $articles = Article::find($id);
+        $articles->title = $request->input('title');
+        $articles->description = $request->input('description');
+        $articles->content = $request->input('content');
+        $articles->save();
+
+        return redirect('/articles')->with('success','You have successfully updated an article!');
     }
 
     /**
@@ -94,6 +107,8 @@ class ArticlesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $articles = Article::find($id);
+        $articles->delete();
+        return redirect('/articles')->with('success','You have successfully deleted an article!');
     }
 }
