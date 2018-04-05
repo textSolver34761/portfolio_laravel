@@ -29,20 +29,23 @@
                     <br>
                     <div class="carousel-item active">
                         <img class="d-block w-100 img-fluid" src="{{$image->URL}}" height="150" width="150">
-                            <h5>{{$image->name}}</h5>
-                            <p>{{$image->description}}</p>
+                        <h5>{{$project->name}}</h5>
+                        <p>{{$project->description}}</p>
+                        <p>{{$tag->name}}</p>
                     </div>
                     <br>
                     <div class="carousel-item active">
                         <img class="d-block w-100 img-fluid" src="{{$image->URL}}" height="150" width="150">
-                            <h5>{{$image->name}}</h5>
-                            <p>{{$image->description}}</p>
+                        <h5>{{$project->name}}</h5>
+                        <p>{{$project->description}}</p>
+                        <p>{{$tag->name}}</p>
                     </div>
                     <br>
                     <div class="carousel-item active">
                         <img class="d-block w-100 img-fluid" src="{{$image->URL}}" height="150" width="150">
-                            <h5>{{$image->name}}</h5>
-                            <p>{{$image->description}}</p>
+                        <h5>{{$project->name}}</h5>
+                        <p>{{$project->description}}</p>
+                        <p>{{$tag->name}}</p>
                     </div>
                 </div>
             @endforeach

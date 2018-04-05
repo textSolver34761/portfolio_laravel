@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Image;
+use App\ImageProject;
 use App\Tag;
 use App\Project;
 
@@ -32,7 +32,7 @@ class PagesController extends Controller
 
     public function work(){
         $title = 'This is my work';
-        $images = Image::all();
+        $images = ImageProject::all();
         $tags = Tag::all();
         $projects = Project::all();
         return view('pages.work')->with('title',$title)->with('projects', $projects)->with('images', $images)->with('tags', $tags);

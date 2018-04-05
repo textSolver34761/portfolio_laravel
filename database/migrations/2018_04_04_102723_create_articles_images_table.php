@@ -16,13 +16,13 @@ class CreateArticlesImagesTable extends Migration
         Schema::create('articles_images', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('articles_id')->index();
-            $table->unsignedInteger('images_project_id')->index();
+            $table->unsignedInteger('image_articles_id')->index();
             $table->engine = 'InnoDB';
         });
 
         Schema::table('articles_images', function($table){
             $table->foreign('articles_id')->references('id')->on('articles');
-            $table->foreign('images_project_id')->references('id')->on('images_project');
+            $table->foreign('image__articles_id')->references('id')->on('image_articles');
         });
     }
 
