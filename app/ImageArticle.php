@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class ImageArticle extends Model
 {
 
-    public function article(){
-        return $this->hasMany('App\Article');
+    public function articeimage(){
+        return $this->belongsTo('App\ArticleImage');
     }
 
 }

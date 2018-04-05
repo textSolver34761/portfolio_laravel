@@ -6,15 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
-    public function image(){
-        return $this->hasMany('App\Image');
-    }
-
-    public function tag(){
-        return $this->hasMany('App\Tag');
-    }
 
     public function user(){
         return $this->belongsTo('App\User');
+    }
+
+    public function articletag(){
+        return $this->belongsTo('App\ArticleTag');
+    }
+
+    public function articleimage(){
+        return $this->belongsTo('App\ArticleImage');
     }
 }
