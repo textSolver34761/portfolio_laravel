@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateArticlesImagesTable extends Migration
+class CreateArticleImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,16 @@ class CreateArticlesImagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('articles_images', function (Blueprint $table) {
+        Schema::create('article_images', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('articles_id')->index();
             $table->unsignedInteger('image_articles_id')->index();
             $table->engine = 'InnoDB';
         });
 
-        Schema::table('articles_images', function($table){
+        Schema::table('article_images', function($table){
             $table->foreign('articles_id')->references('id')->on('articles');
-            $table->foreign('image__articles_id')->references('id')->on('image_articles');
+            $table->foreign('image_articles_id')->references('id')->on('image_articles');
         });
     }
 
@@ -33,6 +33,6 @@ class CreateArticlesImagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('articles_images');
+        Schema::dropIfExists('article_images');
     }
 }

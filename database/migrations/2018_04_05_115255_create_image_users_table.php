@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateImagesUsersTable extends Migration
+class CreateImageUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateImagesUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('images_users', function (Blueprint $table) {
+        Schema::create('image_users', function (Blueprint $table) {
             $table->increments('id');
             $table->binary('url');
             $table->unsignedInteger('users_id')->index();
@@ -22,7 +22,7 @@ class CreateImagesUsersTable extends Migration
             $table->engine = 'InnoDB';
         });
         
-        Schema::table('images_users', function($table){
+        Schema::table('image_users', function($table){
             $table->foreign('users_id')->references('id')->on('users');
         });
     }
