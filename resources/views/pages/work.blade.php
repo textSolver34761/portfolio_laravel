@@ -27,21 +27,21 @@
                             <p>{{$tag->name}}</p>
                     </div>
                     <br>
-                    <div class="carousel-item active">
+                    <div class="carousel-item">
                         <img class="d-block w-100 img-fluid" src="{{$image->URL}}" height="150" width="150">
                         <h5>{{$project->name}}</h5>
                         <p>{{$project->description}}</p>
                         <p>{{$tag->name}}</p>
                     </div>
                     <br>
-                    <div class="carousel-item active">
+                    <div class="carousel-item">
                         <img class="d-block w-100 img-fluid" src="{{$image->URL}}" height="150" width="150">
                         <h5>{{$project->name}}</h5>
                         <p>{{$project->description}}</p>
                         <p>{{$tag->name}}</p>
                     </div>
                     <br>
-                    <div class="carousel-item active">
+                    <div class="carousel-item">
                         <img class="d-block w-100 img-fluid" src="{{$image->URL}}" height="150" width="150">
                         <h5>{{$project->name}}</h5>
                         <p>{{$project->description}}</p>
