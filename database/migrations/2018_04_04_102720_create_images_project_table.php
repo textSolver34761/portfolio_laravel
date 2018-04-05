@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateImagesTable extends Migration
+class CreateImagesProjectTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,22 +13,16 @@ class CreateImagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('images', function (Blueprint $table) {
+        Schema::create('images_project', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->longText('description');
-            $table->integer('height');
-            $table->string('type');
             $table->binary('url');
-            $table->unsignedInteger('users_id')->index();
             $table->unsignedInteger('projects_id')->index();
             $table->timestamps();
             $table->softDeletes();
             $table->engine = 'InnoDB';
         });
         
-        Schema::table('images', function($table){
-            $table->foreign('users_id')->references('id')->on('users');
+        Schema::table('images_project', function($table){
             $table->foreign('projects_id')->references('id')->on('projects');
         });
     }

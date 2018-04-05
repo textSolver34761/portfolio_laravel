@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Image;
+use App\Tag;
+use App\Project;
+
 class PagesController extends Controller
 {
     public function index(){
@@ -28,6 +32,9 @@ class PagesController extends Controller
 
     public function work(){
         $title = 'This is my work';
-        return view('pages.work')->with('title',$title);
+        $images = Image::all();
+        $tags = Tag::all();
+        $projects = Project::all();
+        return view('pages.work')->with('title',$title)->with('projects', $projects)->with('images', $images)->with('tags', $tags);
     }
 }
