@@ -1,6 +1,6 @@
 <footer class="footer bg-dark p-5 text-white">
     <div class="container">
-        <h4 class="text-center">Follow me on social networks:</h4>
+        <h3 class="text-center">Follow me on social networks:</h3>
         <div class="row">
             <div class="col-sm">
                 <a class="nav-link  text-white" href="https://www.twitter.com/benjamin_pradon" target="_blank">My Twitter account</a>
@@ -18,6 +18,6 @@
                 <a class="nav-link text-white" href="/contact">Contact me</a>
             </div>
         </div>
-        <h4 class="text-center">&copy; Benjamin Pradon - <?php echo date("Y");?>, all rights reserved </h4>
+        <h3 class="text-center">&copy; Benjamin Pradon - <?php echo date("Y");?>, all rights reserved </h3>
     </div>
 </footer>

@@ -3,26 +3,38 @@
 <br>
 <br>
 <br>
-    <h1 class="center">You whant to know more about me?</h1> <br>
-        <h3 class="center"> You are on the right place! </h3>
+    <h1 class="text-center">You whant to know more about me?</h1> <br>
+        <h2 class="text-center"> You are on the right place! </h2>
         <br>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus pellentesque odio, at efficitur urna. Pellentesque dictum interdum elit, eget pharetra orci faucibus quis. Aenean justo dolor, gravida sit amet sodales non, vehicula a augue. Nunc sodales non tellus id pulvinar. Duis aliquet tellus at augue volutpat, at eleifend lacus ornare. Nam malesuada vestibulum turpis quis faucibus. Donec volutpat eros at nibh porttitor sodales id non urna. Duis ultrices risus a efficitur vestibulum. Donec at bibendum nisl, vel iaculis nulla. Nunc nibh metus, dapibus tempus blandit eget, mattis in est. Nam suscipit, turpis nec maximus maximus, mauris metus porttitor erat, eu commodo ex massa sit amet orci.
+            <h3 class="text-center"> Why this site?</h3> 
+            This site has two objectives : 
+            <ul>
+                <li>To show what I have learned; </li>
+                <li>To show where I want to go; </li>
+            </ul>
+            As you can see in the <a href="work"> work </a> tab, and thanks to my training at <a href="https://simplon.co"> Simplon </a> I am specialized in PHP. This means that know how to code in native PHP, in Laravel, and i'm willing to learn Symfony. <br>
+            As I said to my trainers on my first week I started coding it's that I'd like to go on AI (Artificial Intelligence) or on IoT (Internet Of Things). <br>
+            The best way for me to start this was to build a chatbot (you can find it <a href="https://landbot.io/u/H-27113-GJVK3FFB9B71354C/index.html"> here. </a>)
         </p>
 
         <p>
-            Maecenas ac leo volutpat, rhoncus diam a, convallis nisl. Nulla tempus maximus facilisis. Fusce felis tortor, placerat non mattis sit amet, blandit eu odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus eget turpis sit amet tortor interdum ullamcorper vel nec mi. Mauris at elementum risus. Vestibulum ut imperdiet quam. Praesent nibh sem, cursus in imperdiet a, sollicitudin non libero. Ut vitae mauris id justo tincidunt maximus a at justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce quis magna ac odio venenatis viverra. Mauris lacus magna, porta eget faucibus vel, elementum id lectus. Cras nec luctus eros. Vivamus vel orci ac nunc cursus egestas pretium sed nibh. Fusce laoreet lectus velit, a vestibulum quam ultrices et. Mauris vitae lacinia orci.
+            Before starting coding, I have work for almost two years at CSC (witch became DXC Technoloy thanks to its merge with HP Enteprise) and EI-Technologies who are both consulting compagnies. <br>
+            I was a functional Salesforce consultant and I learned:
+            <ul>
+                <li> how to apdat myself to new project; </li>
+                <li> how to work in team. I have worked with a group of more than ten poeple (including functionals consultants, technical consutlant, managers) on few projects; </li>
+                <li> how to use the Agile method. I reinforced this skill while training myself at Simplon, with the Scrum Master and Product Owner roles.</li>
+                <li>  </li>
+            </ul>
+            And I'm still willing to learn more. 
         </p>
 
         <p>
-            Suspendisse euismod ornare risus, dapibus luctus enim rutrum sed. Vestibulum at nulla tincidunt, blandit urna id, vehicula odio. Mauris dignissim, turpis a lacinia porta, orci nisi commodo turpis, nec ultricies nunc ex hendrerit lorem. Nulla nec volutpat neque. Sed eget malesuada est, vel interdum erat. Ut pulvinar, arcu nec molestie mollis, tortor justo volutpat arcu, ut dignissim enim purus et ex. Donec non ante finibus, interdum enim vel, euismod ante. Praesent rhoncus a massa et pulvinar. Nunc tincidunt leo ut massa mattis posuere. Phasellus pulvinar volutpat mauris, in viverra erat lacinia ut. Nam a commodo velit. Aliquam ornare placerat elit sed tincidunt. Duis imperdiet, ante et dictum luctus, leo dolor ultricies risus, sit amet dapibus nisi purus sit amet diam. Nunc faucibus auctor sapien eget pellentesque. Donec scelerisque eu erat a ultricies. Integer ut est non nisi viverra accumsan.
+            Before being a Salesforce consultant I was graduated from <a href="https://www.iscparis.com/"> ISC School of Management </a> in Marketing Digital & E-Business, so I can easly make the connection between the customer and the developer team i'll be working with.
         </p>
 
         <p>
-            Integer porta dignissim est in consectetur. Mauris posuere velit eu nunc finibus interdum. Fusce ante nisl, condimentum id arcu a, ullamcorper fermentum nulla. Fusce eget enim elementum, rutrum purus et, suscipit erat. Cras efficitur felis in consequat accumsan. Donec congue magna vel leo ultrices, a eleifend enim pharetra. Nulla consequat, elit nec tempor tristique, mauris ligula faucibus justo, eget mattis metus orci a mi. Ut a porta nisl, ut tempus libero. Donec id turpis leo. Nunc at metus vel lacus venenatis efficitur eu in neque.
-        </p>
-
-        <p>
-        Cras molestie dolor sit amet dignissim maximus. Fusce iaculis a risus ac finibus. Nunc ultrices rutrum augue ut maximus. Donec finibus volutpat lacus. Morbi id iaculis erat. Cras fermentum augue orci, ut auctor nisl finibus eu. Cras maximus non metus id rutrum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae
+            Despite coding, I like reading spirital books and meditating. <br>
         </p>
 @endsection

@@ -41,35 +41,31 @@ class PagesController extends Controller
         
         $paquets = array(
             'laravel'=> array(
-                'image' => $image->url,
-                'project' => $project->name,
+                'URL' => $image->url,
+                'name' => $project->name,
                 'descritption' => $project->description,
-                'tag' => $tag->name,
-                'URL' => ''
+                'name' => $tag->name,
             ),
 
             'natif' => array(
-                'image' => $image->url,
-                'project' => $project->name,
+                'URL' => $image->url,
+                'name' => $project->name,
                 'descritption' =>$project->description,
-                'tag' => $tag->name,
-                'URL' => ''
+                'name' => $tag->name,
             ),
 
             'objects connectés' => array(
-                'image' => $image->url,
-                'project' => $project->name,
+                'URL' => $image->url,
+                'name' => $project->name,
                 'descritption' => $project->description,
-                'tag' => $tag->name,
-                'URL' => ''
+                'name' => $tag->name,
             ),
 
             'chatbot' => array(
-                'image' => $image->url,
-                'project' => $project->name,
+                'URL' => $image->url,
+                'name' => $project->name,
                 'descritption' => $project->description,
-                'tag' => $tag->name,
-                'URL' => ''
+                'name' => $tag->name,
             )
         );
 

@@ -20,27 +20,27 @@
                 <div class="carousel-item active"> 
                         <img class="d-block w-100 img-fluid" src="{{$paquet['URL']}}" height="150" width="150">
                         <h5>{{$paquet['name']}}</h5>
-                        <p>{{$paquet['description']}}</p>
+                        <p>{{$paquet['descritption']}}</p>
                         <p>{{$paquet['name']}}</p>
                 </div>
-                <!--div class="carousel-item">
-                    <img class="d-block w-100 img-fluid" src="{{$paquet->URL}}" height="150" width="150">
-                    <h5>{{$paquet->name}}</h5>
-                    <p>{{$paquet->description}}</p>
-                    <p>{{$paquet->name}}</p>
+                <div class="carousel-item">
+                    <img class="d-block w-100 img-fluid" src="{{$paquet['URL']}}" height="150" width="150">
+                    <h5>{{$paquet['name']}}</h5>
+                    <p>{{$paquet['descritption']}}</p>
+                    <p>{{$paquet['name']}}</p>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100 img-fluid" src="{{$paquet->URL}}" height="150" width="150">
-                    <h5>{{$paquet->name}}</h5>
-                    <p>{{$paquet->description}}</p>
-                    <p>{{$paquet->name}}</p>
+                    <img class="d-block w-100 img-fluid" src="{{$paquet['URL']}}" height="150" width="150">
+                    <h5>{{$paquet['name']}}</h5>
+                    <p>{{$paquet['descritption']}}</p>
+                    <p>{{$paquet['name']}}</p>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100 img-fluid" src="{{$paquet->URL}}" height="150" width="150">
-                    <h5>{{$paquet->name}}</h5>
-                    <p>{{$paquet->description}}</p>
-                    <p>{{$paquet->name}}</p>
-                </div-->
+                    <img class="d-block w-100 img-fluid" src="{{$paquet['URL']}}" height="150" width="150">
+                    <h5>{{$paquet['name']}}</h5>
+                    <p>{{$paquet['descritption']}}</p>
+                    <p>{{$paquet['name']}}</p>
+                </div>
             </div>
         @endforeach
 
