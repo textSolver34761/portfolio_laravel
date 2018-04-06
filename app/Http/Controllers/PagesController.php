@@ -29,12 +29,50 @@ class PagesController extends Controller
         $title = 'Welcome to my blog';
         return view('pages.blog')->with('title',$title);
     }
-
+    
+    
     public function work(){
         $title = 'This is my work';
-        $images = ImageProject::all();
-        $tags = Tag::all();
-        $projects = Project::all();
-        return view('pages.work')->with('title',$title)->with('projects', $projects)->with('images', $images)->with('tags', $tags);
+
+        $image = ImageProject::first();
+        $project = Project::first();
+        $description = Project::first();
+        $tag = Tag::first();
+        
+        $paquets = array(
+            'laravel'=> array(
+                'image' => $image->url,
+                'project' => $project->name,
+                'descritption' => $project->description,
+                'tag' => $tag->name,
+                'URL' => ''
+            ),
+
+            'natif' => array(
+                'image' => $image->url,
+                'project' => $project->name,
+                'descritption' =>$project->description,
+                'tag' => $tag->name,
+                'URL' => ''
+            ),
+
+            'objects connectés' => array(
+                'image' => $image->url,
+                'project' => $project->name,
+                'descritption' => $project->description,
+                'tag' => $tag->name,
+                'URL' => ''
+            ),
+
+            'chatbot' => array(
+                'image' => $image->url,
+                'project' => $project->name,
+                'descritption' => $project->description,
+                'tag' => $tag->name,
+                'URL' => ''
+            )
+        );
+
+        return view('pages.work')->with('title',$title)->with('paquets', $paquets);
     }
 }
