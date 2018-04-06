@@ -21,9 +21,12 @@
                     <h3>{{$article ->title}}</h3>
                     <description> <a href="/articles/{{$article->id}}"> {{$article ->description}} </a> </description> <br>
                     <small> written on {{$article ->created_at}} </small>
+                    @endforeach
+                    @foreach($tags as $tag)
+                        <p>{{$tag->name}}</p>
+                    @endforeach
                 </div>
                 <br>
-            @endforeach
             {{$articles->links()}}
         @else
         <p> No articles found </p>
