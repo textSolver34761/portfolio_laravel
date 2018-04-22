@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use App\ArticleImage;
+use App\Image;
 use App\Tag;
+use App\ArticleTag;
+use App\User;
 
 class ArticlesController extends Controller
 {
@@ -27,7 +31,8 @@ class ArticlesController extends Controller
     {
         $articles = Article::orderBy('created_at','desc')->paginate(5);
         $tags = Tag::get();
-        return view ('articles.index')->with('articles',$articles)->with('tags',$tags);
+        //$images = Images::get();
+        return view('articles.index')->with('articles',$articles)->with('tags',$tags);//->with('images',$images);
     }
 
     /**
@@ -87,7 +92,7 @@ class ArticlesController extends Controller
 
         //Check correct users
 
-        if(auth()->user()->id !== $articles->user_id){
+        if(auth()->user()->role !== 1){
             return redirect ('/articles')->with('error','You are not authorized !');
         }
 

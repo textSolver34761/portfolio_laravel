@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ImageArticle extends Model
+class Image extends Model
 {
 
     public function articeimage(){

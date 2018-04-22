@@ -11,8 +11,8 @@ class ArticleImage extends Model
         return $this->belongsTo('App\Article');
     }
 
-    public function imagearticle(){
-        return $this->belongsTo('App\ImageArticle');
+    public function image(){
+        return $this->belongsTo('App\Image');
     }
 
 }

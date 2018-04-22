@@ -9,8 +9,5 @@ class Project extends Model
     public function projecttag(){
         return $this->belongsTo('App\ProjectTag');
     }
-
-    public function imageproject(){
-        return $this->belongsTo('App\ImageProject');
-    }
+    
 }

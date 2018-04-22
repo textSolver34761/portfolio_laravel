@@ -27,11 +27,4 @@ class User extends Authenticatable
         'password', 'remember_token', 'role',
     ];
     
-    public function image(){
-        return $this->belongsTo('App\Image');
-    }
-
-    public function article(){
-        return $this->hasMany('App\Article');
-    }
 }

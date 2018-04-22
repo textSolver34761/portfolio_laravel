@@ -18,6 +18,9 @@
                 <a class="nav-link text-white" href="/contact">Contact me</a>
             </div>
         </div>
+        <br>
+        <br>
+        <a class="nav-link text-white text-center" href="/cgu">Voici les conditions générales d'utilisations</a>. <br> 
         <h3 class="text-center">&copy; Benjamin Pradon - <?php echo date("Y");?>, all rights reserved </h3>
     </div>
 </footer>
