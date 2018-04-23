@@ -18,6 +18,7 @@ class CreateArticlesTable extends Migration
             $table->string('title');
             $table->longText('description');
             $table->longText('content');
+            $table->string('image');
             $table->timestamps();
             $table->softDeletes();
             $table->engine = 'InnoDB';

@@ -5,20 +5,23 @@
 <br>
 <br>
     <h1>Create an article</h1>
-    {!! Form::open(['action' => 'ArticlesController@store', 'method' => 'post'] ) !!}
+    {!! Form::open(['action' => 'ArticlesController@store', 'method' => 'post', 'enctype'=> 'multipart/data'] ) !!}
     <div class="form-group">
         {{Form::label('title','Title')}}
         {{Form::text('title','',['class'=> 'form-control','placeholder'=> 'Title'])}}
     </div>
 
     <div class="form-group">
-            {{Form::label('description','Description')}}
-            {{Form::text('description','',['class'=> 'form-control','placeholder'=> 'Description'])}}
+        {{Form::label('description','Description')}}
+        {{Form::text('description','',['class'=> 'form-control','placeholder'=> 'Description'])}}
     </div>
 
     <div class="form-group">
-            {{Form::label('content','Content')}}
-            {{Form::textarea('content','',['id'=>'article-ckeditor', 'class'=> 'form-control','placeholder'=> 'Content'])}}
+        {{Form::label('content','Content')}}
+        {{Form::textarea('content', '' ,['class'=> 'form-control','placeholder'=> 'Content'])}}
+    </div>
+    <div class="form-group">
+        {{Form::file('image')}}
     </div>
     {{Form::submit('submit',['class'=> 'btn btn-primary'])}}
     {!! Form::close() !!}

@@ -2,15 +2,9 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class ProjectTag extends Model
+class ProjectTag extends Pivot
 {
-    public function tag(){
-        return $this->belongsTo('App\Tag');
-    }
-
-    public function project(){
-        return $this->belongsTo('App\Project');
-    }
+    //
 }

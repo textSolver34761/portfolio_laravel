@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-    public function projecttag(){
-        return $this->belongsTo('App\ProjectTag');
+    public function tag(){
+        return $this->belongsToMany('App\Tag')->using('App\ProjectTag');
     }
-    
+
 }

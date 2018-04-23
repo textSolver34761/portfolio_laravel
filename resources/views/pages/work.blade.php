@@ -19,21 +19,21 @@
 
         <div class="carousel-item">
                 <h2>{{$chatbot['name']}}</h2>
-                <img class="d-block w-100 img-fluid" src="{{asset('Caroussel/iot.png')}}" height="150" width="150">
+                <img class="d-block w-100 img-fluid" src="{{asset('Caroussel/chatbot.png')}}" height="150" width="150">
                 <p>{{$chatbot['description']}}</p>
                 <p>{{$chatbot['name']}}</p>
         </div>
 
         <div class="carousel-item">
                 <h2>{{$iot['name']}}</h2>
-                <img class="d-block w-100 img-fluid" src="{{asset('Caroussel/php.png')}}" height="150" width="150">
+                <img class="d-block w-100 img-fluid" src="{{asset('Caroussel/iot.png')}}" height="150" width="150">
                 <p>{{$iot['description']}}</p>
                 <p>{{$iot['name']}}</p>
         </div>
 
         <div class="carousel-item">
                 <h2>{{$natif['name']}}</h2>
-                <img class="d-block w-100 img-fluid" src="{{asset('Caroussel/chatbot.png')}}" height="150" width="150">
+                <img class="d-block w-100 img-fluid" src="{{asset('Caroussel/php.png')}}" height="150" width="150">
                 <p>{{$natif['description']}}</p>
                 <p>{{$natif['name']}}</p>
         </div>
