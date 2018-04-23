@@ -88,19 +88,9 @@
                                 @endif
                             </div>
                         </div>
-                        
-                        <div class="form-group row">
-                                <div class="col-md-6 offset-md-4">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" name="cgu" {{ old('remember') ? 'checked' : '' }}> {{ __('I have read and accepted the <a href="/cgu"> Terms and Conditions </a> of the site') }}
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
 
                         <div class="checkbox cgu-checkbox">
-                           <input name="cgu" class="checkbox"  type="checkbox" tabindex="1"/> I have read and accepted the <a href="/cgu"> Terms and Conditions </a> of the site.
+                           <input name="terms_and_condition" class="checkbox"  type="checkbox" tabindex="1"/> I have read and accepted the <a href="/termsconditions"> Terms and Conditions </a> of the site.
                        </div>
 
                         <div class="form-group row mb-0">

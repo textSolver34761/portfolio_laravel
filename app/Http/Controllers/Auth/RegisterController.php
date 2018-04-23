@@ -53,7 +53,7 @@ class RegisterController extends Controller
             'first_name' => 'required',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
-            'cgu' => 'required'
+            'terms_and_condition' => 'required'
         ]);
     }
 
@@ -66,15 +66,10 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            //if('cgu'= 1){
                 'name' => $data['name'],
                 'first_name' => $data['first_name'],
                 'email' => $data['email'],
                 'password' => Hash::make($data['password']),
-            //}
-            //else{
-            //    'Please read and accept the terms of service'
-            //}
         ]);
     }
 }

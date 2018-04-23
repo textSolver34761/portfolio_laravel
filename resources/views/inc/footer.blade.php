@@ -20,7 +20,7 @@
         </div>
         <br>
         <br>
-        <a class="nav-link text-white text-center" href="/cgu">Voici les conditions générales d'utilisations</a>. <br> 
+        <a class="nav-link text-white text-center" href="/termsconditions">Here are the Terms and Conditions of our site</a>. <br> 
         <h3 class="text-center">&copy; Benjamin Pradon - <?php echo date("Y");?>, all rights reserved </h3>
     </div>
 </footer>

@@ -83,7 +83,12 @@ class PagesController extends Controller
     }
 
     public function cgu(){
-        $title = '';
+        $title = 'conditions générales d\'utilisations';
         return view('pages.cgu')->with('title',$title);
+    }
+
+    public function tc(){
+        $title = 'Terms and Conditions';
+        return view('pages.termsconditions')->with('title',$title);
     }
 }

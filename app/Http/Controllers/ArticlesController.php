@@ -29,8 +29,8 @@ class ArticlesController extends Controller
         //$tags = Tag::get();
        
         $articles = Article::get();
-        foreach ($articles->tag as $tags) {
-            echo $tags->pivot->name;
+        foreach ($articles->tags as $tag) {
+            echo $tag->pivot->name;
         }
         return view('articles.index')->with('articles',$articles)->with('tags',$tags);//->with('images',$images);
     }
