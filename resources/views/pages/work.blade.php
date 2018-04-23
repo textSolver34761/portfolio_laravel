@@ -3,46 +3,42 @@
 <br>
 <br>
 <br>
-<title></title>
-
-<h1 class="text-center">This is my work</h1>
-        
+<title>{{$title}}</title>
+        <h1 class="text-center">This is my work:</h1>
+        <br>
+        <br>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           
-    <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-    </ol>
-        @foreach($paquets as $paquet)
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active"> 
-                        <img class="d-block w-100 img-fluid" src="{{$paquet['URL']}}" height="150" width="150">
-                        <h5>{{$paquet['name']}}</h5>
-                        <p>{{$paquet['descritption']}}</p>
-                        <p>{{$paquet['name']}}</p>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100 img-fluid" src="{{$paquet['URL']}}" height="150" width="150">
-                    <h5>{{$paquet['name']}}</h5>
-                    <p>{{$paquet['descritption']}}</p>
-                    <p>{{$paquet['name']}}</p>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100 img-fluid" src="{{$paquet['URL']}}" height="150" width="150">
-                    <h5>{{$paquet['name']}}</h5>
-                    <p>{{$paquet['descritption']}}</p>
-                    <p>{{$paquet['name']}}</p>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100 img-fluid" src="{{$paquet['URL']}}" height="150" width="150">
-                    <h5>{{$paquet['name']}}</h5>
-                    <p>{{$paquet['descritption']}}</p>
-                    <p>{{$paquet['name']}}</p>
-                </div>
-            </div>
-        @endforeach
+    <div class="carousel-inner text-center" role="listbox">
+        <div class="carousel-item active"> 
+            <h2>{{$laravel['name']}}</h2>
+            <img class="d-block w-100 img-fluid" src="{{asset('Caroussel/laravel.png')}}" height="150" width="150">
+            <p>{{$laravel['description']}}</p>
+            <p>{{$laravel['name']}}</p>
+        </div>
+
+        <div class="carousel-item">
+                <h2>{{$chatbot['name']}}</h2>
+                <img class="d-block w-100 img-fluid" src="{{asset('Caroussel/chatbot.png')}}" height="150" width="150">
+                <p>{{$chatbot['description']}}</p>
+                <p>{{$chatbot['name']}}</p>
+        </div>
+
+        <div class="carousel-item">
+                <h2>{{$iot['name']}}</h2>
+                <img class="d-block w-100 img-fluid" src="{{asset('Caroussel/iot.png')}}" height="150" width="150">
+                <p>{{$iot['description']}}</p>
+                <p>{{$iot['name']}}</p>
+        </div>
+
+        <div class="carousel-item">
+                <h2>{{$natif['name']}}</h2>
+                <img class="d-block w-100 img-fluid" src="{{asset('Caroussel/php.png')}}" height="150" width="150">
+                <p>{{$natif['description']}}</p>
+                <p>{{$natif['name']}}</p>
+        </div>
+
+    </div>
 
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

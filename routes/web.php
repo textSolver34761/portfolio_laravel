@@ -15,9 +15,13 @@ Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/contact', 'PagesController@contact');
 Route::get('/work', 'PagesController@work');
+Route::get('/cgu','PagesController@cgu');
+Route::get('/termsconditions','PagesController@tc');
 
 Route::resource('articles', 'ArticlesController');
 
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
+
+

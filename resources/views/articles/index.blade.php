@@ -4,11 +4,6 @@
 <br>
 <br>
 <br>
-    <!--div class="jumbotron text-center">        
-        <h1 class="center"> Welcome to my blog ! </h1>
-        <h2 class="center"> Tips, tutorials and more on chatbots, artificials intelligence </h2>
-        <p><a class="btn btn-primary btn-lg" href="route{{('login')}}" role="button">Login</a> <a class="btn btn-primary btn-lg" href="route{{('register')}}" role="button">Register</a></p>
-    </div-->
     <h1 class="text-center"> Welcome to my blog ! </h1>
     @if(!Auth::guest())
         @if(Auth::user()->role == 1)

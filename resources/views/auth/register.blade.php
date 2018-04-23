@@ -89,6 +89,10 @@
                             </div>
                         </div>
 
+                        <div class="checkbox cgu-checkbox">
+                           <input name="terms_and_condition" class="checkbox"  type="checkbox" tabindex="1"/> I have read and accepted the <a href="/termsconditions"> Terms and Conditions </a> of the site.
+                       </div>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

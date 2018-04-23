@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\ImageProject;
+//use App\ImageProject;
 use App\Tag;
 use App\Project;
+use App\ProjectTags;
 
 class PagesController extends Controller
 {
@@ -32,43 +33,62 @@ class PagesController extends Controller
     
     
     public function work(){
-        $title = 'This is my work';
+        $title = 'This is my work:';
 
-        $image = ImageProject::first();
-        $project = Project::first();
-        $description = Project::first();
-        $tag = Tag::first();
-        
-        $paquets = array(
-            'laravel'=> array(
-                'URL' => $image->url,
-                'name' => $project->name,
-                'descritption' => $project->description,
-                'name' => $tag->name,
-            ),
+        /*$jointurelaravel = ProjectTags::find(2);
+        $joiturechatbot = ProjectTags::find(3);
+        $joitureiot = ProjectTags::find(1);
+        $jointurenatif = ProjectTags::find(4);*/
 
-            'natif' => array(
-                'URL' => $image->url,
-                'name' => $project->name,
-                'descritption' =>$project->description,
-                'name' => $tag->name,
-            ),
+        $projectlaravel = Project::find(2);
+        $projectchatbot = Project::find(3); 
+        $projectiot = Project::find(1);
+        $projectnatif = Project::find(4);
 
-            'objects connectés' => array(
-                'URL' => $image->url,
-                'name' => $project->name,
-                'descritption' => $project->description,
-                'name' => $tag->name,
-            ),
+        $projectlaravel = Project::find(2);
+        $projectchatbot = Project::find(3);
+        $projectiot = Project::find(1);
+        $projectnatif = Project::find(4);
 
-            'chatbot' => array(
-                'URL' => $image->url,
-                'name' => $project->name,
-                'descritption' => $project->description,
-                'name' => $tag->name,
-            )
+        $taglaravel = Tag::find(1);
+        $tagchatbot = Tag::find(2);
+        $tagiot = Tag::find(3);
+        $tagnatif = Tag::find(4);
+
+        $laravel = array(
+            'name'=>$projectlaravel->name,
+            'description' => $projectlaravel->description,
+            'name' =>$taglaravel->name
         );
 
-        return view('pages.work')->with('title',$title)->with('paquets', $paquets);
+        $chatbot = array(
+            'name' => $projectchatbot->name,
+            'description' => $projectchatbot->description,
+            'name' => $tagchatbot->name
+        );
+
+        $iot = array(
+            'name' => $projectiot->name,
+            'description' => $projectiot->description,
+            'name' => $tagiot->name
+        );
+        
+        $natif = array(
+            'name'=>$projectnatif->name,
+            'description' => $projectnatif->description,
+            'name' =>$tagnatif->name
+        );
+
+        return view('pages.work')->with('title',$title)->with('laravel', $laravel)->with('iot', $iot)->with('natif', $natif)->with('chatbot', $chatbot);//->with('jointurelaravel', $jointurelaravel);
+    }
+
+    public function cgu(){
+        $title = 'conditions générales d\'utilisations';
+        return view('pages.cgu')->with('title',$title);
+    }
+
+    public function tc(){
+        $title = 'Terms and Conditions';
+        return view('pages.termsconditions')->with('title',$title);
     }
 }

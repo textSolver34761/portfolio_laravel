@@ -23,11 +23,16 @@ class ArticlesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index()//voir les tags
     {
         $articles = Article::orderBy('created_at','desc')->paginate(5);
-        $tags = Tag::get();
-        return view ('articles.index')->with('articles',$articles)->with('tags',$tags);
+        //$tags = Tag::get();
+       
+        $articles = Article::get();
+        foreach ($articles->tags as $tag) {
+            echo $tag->pivot->name;
+        }
+        return view('articles.index')->with('articles',$articles)->with('tags',$tags);//->with('images',$images);
     }
 
     /**
@@ -35,7 +40,7 @@ class ArticlesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create() // liés les tags
     {
         return view ('articles.create');
     }
@@ -46,13 +51,24 @@ class ArticlesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request) // enregistrer les tags
     {
         $this->validate($request, [
             'title' => 'required',
             'description' => 'required',
-            'content' => 'required'
+            'content' => 'required',
+            'image' => 'image|nullable|max:5999'
         ]);
+
+        // Handle File img
+
+        if($request-> hasFile('image')){
+            //
+        } else{
+            $NameToStore ='default.jpg';
+        }
+
+
         //Save Article newly created
         $articles = new Article;
         $articles->title = $request->input('title');
@@ -69,7 +85,7 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id) // voir les tags
     {
         $articles = Article::find($id);
         return view ('articles.show')->with('articles',$articles);
@@ -81,13 +97,13 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id) // modifier les tags
     {
         $articles = Article::find($id);
 
         //Check correct users
 
-        if(auth()->user()->id !== $articles->user_id){
+        if(auth()->user()->role !== 1){
             return redirect ('/articles')->with('error','You are not authorized !');
         }
 
@@ -101,7 +117,7 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id) 
     {
         $this->validate($request, [
             'title' => 'required',
@@ -124,7 +140,7 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id) // detruire les tags
     {
         $articles = Article::find($id);
 
