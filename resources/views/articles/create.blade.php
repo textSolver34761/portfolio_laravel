@@ -5,7 +5,7 @@
 <br>
 <br>
     <h1>Create an article</h1>
-    {!! Form::open(['action' => 'ArticlesController@store', 'method' => 'post', 'enctype'=> 'multipart/data'] ) !!}
+    {!! Form::open(['action' => 'ArticlesController@store', 'method'=>'post','files' => true]) !!}
     <div class="form-group">
         {{Form::label('title','Title')}}
         {{Form::text('title','',['class'=> 'form-control','placeholder'=> 'Title'])}}
@@ -32,9 +32,9 @@
         </select>
     </div>
 
-    <!--div class="form-group">
+    <div class="form-group">
         {{Form::file('image')}}
-    </div-->
+    </div>
     {{Form::submit('submit',['class'=> 'btn btn-primary'])}}
     {!! Form::close() !!}
 @endsection

@@ -58,13 +58,22 @@ class ArticlesController extends Controller
             'title' => 'required',
             'description' => 'required',
             'content' => 'required',
-            'image' => 'image|nullable|max:5999'
+            'image' => 'image|nullable|max:10999'
         ]);
 
         // Handle File img
 
         if($request-> hasFile('image')){
-            //
+            //Get Filename w/ extention
+            $filenamewithExtention = $request->file('image')->getClientOriginalName();
+            //Get filename
+            $filename = pathinfo($filenamewithExtention, PATHINFO_FILENAME);
+            //Get extention
+            $extention = $request->file('image')->getClientOriginalExtension();
+            // File name to store
+            $fileNameToStore = $filename.'_'.time();'.'.$extention;
+            //Uplad img
+            $path = $request->file('image')->storeAs('public/image', $fileNameToStore);
         } else{
             $NameToStore ='default.jpg';
         }
@@ -75,6 +84,7 @@ class ArticlesController extends Controller
         $articles->title = $request->input('title');
         $articles->description = $request->input('description');
         $articles->content = $request->input('content');
+        $articles->image = $fileNameToStore;
         $articles->save();
 
         return redirect('/articles')->with('success','You have successfully created an article!');
