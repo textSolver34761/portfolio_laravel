@@ -24,4 +24,4 @@ Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
 
-
+Route::get('profile','UserController@index');

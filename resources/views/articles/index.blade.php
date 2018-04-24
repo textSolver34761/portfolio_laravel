@@ -7,7 +7,7 @@
     <h1 class="text-center"> Welcome to my blog ! </h1>
     @if(!Auth::guest())
         @if(Auth::user()->role == 1)
-            <a href="/articles/create" class="btn btn-default">Create Article </a>
+            <a href="/articles/create" class="btn btn-primary">Create Article </a>
         @endif
     @endif
         @if(count($articles) >0 )
