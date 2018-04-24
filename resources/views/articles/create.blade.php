@@ -31,10 +31,6 @@
             @endforeach
         </select>
     </div>
-
-    <div class="form-group">
-        {{Form::file('image')}}
-    </div>
     {{Form::submit('submit',['class'=> 'btn btn-primary'])}}
     {!! Form::close() !!}
 @endsection

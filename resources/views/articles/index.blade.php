@@ -13,12 +13,12 @@
         @if(count($articles) >0 )
             @foreach($articles as $article)
                 <div class="well jumbotron">
-                    <h3>{{$article ->title}}</h3>
-                    <description> <a href="/articles/{{$article->id}}"> {{$article ->description}} </a> </description> <br>
+                    <h3>{{$article->title}}</h3>
+                    <description>
+                        <a href="/articles/{{$article->id}}"> {{$article ->description}} </a>
+                    </description> <br>
                     <small> written on {{$article ->created_at}} </small>
-                    @endforeach
-                    @foreach($tags as $tag)
-                        <p>{{$tag->name}}</p>
+                        <p>{{$article->tag->name}}</p> <!--utilisation de la table de jointure pour afficher un tag par article -->
                     @endforeach
                 </div>
                 <br>

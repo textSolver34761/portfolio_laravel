@@ -30,7 +30,7 @@
                     </option>
                 @endforeach
             </select>
-        </div>
+    </div>
 
     {{Form::hidden('_method','PUT')}}
     {{Form::submit('submit',['class'=> 'btn btn-primary'])}}

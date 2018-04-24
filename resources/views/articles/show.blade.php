@@ -4,7 +4,7 @@
 <br>
 <br>
 <br>
-    <a href="/articles" class="btn btn-default">Go back</a>
+    <a href="/articles" class="btn btn-primary">Go back</a>
     @if(!Auth::guest())
         @if(Auth::user()->role == 1)
             <a href="/articles/{{$articles->id}}/edit" class="btn btn-default">Edit</a>
