@@ -20,9 +20,21 @@
         {{Form::label('content','Content')}}
         {{Form::textarea('content', '' ,['class'=> 'form-control','placeholder'=> 'Content'])}}
     </div>
+    
     <div class="form-group">
-        {{Form::file('image')}}
+        <label for="tag">Tag</label> <br>
+        <select name="tag" id="tag">
+            @foreach($tags as $tag)
+                <option value={{$tag->id}}>
+                        {{$tag->name}}
+                </option>
+            @endforeach
+        </select>
     </div>
+
+    <!--div class="form-group">
+        {{Form::file('image')}}
+    </div-->
     {{Form::submit('submit',['class'=> 'btn btn-primary'])}}
     {!! Form::close() !!}
 @endsection

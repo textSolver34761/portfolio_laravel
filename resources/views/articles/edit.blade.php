@@ -20,6 +20,18 @@
             {{Form::label('content','Content')}}
             {{Form::textarea('content',$articles->content,['id'=>'article-ckeditor', 'class'=> 'form-control','placeholder'=> 'Content'])}}
     </div>
+
+    <div class="form-group">
+            <label for="tag">Tag</label> <br>
+            <select name="tag" id="tag">
+                @foreach($tags as $tag)
+                    <option value={{$tag->id}}>
+                            {{$tag->tag}}
+                    </option>
+                @endforeach
+            </select>
+        </div>
+
     {{Form::hidden('_method','PUT')}}
     {{Form::submit('submit',['class'=> 'btn btn-primary'])}}
     {!! Form::close() !!}

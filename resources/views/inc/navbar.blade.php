@@ -10,7 +10,7 @@
             </ul>
             <li class="nav-item">
                 <a class="nav-link text-white" href="/about">About</a>
-            </li>        
+            </li>
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Contact</a>

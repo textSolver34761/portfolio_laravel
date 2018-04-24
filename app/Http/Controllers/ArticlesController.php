@@ -28,11 +28,11 @@ class ArticlesController extends Controller
         $articles = Article::orderBy('created_at','desc')->paginate(5);
         //$tags = Tag::get();
        
-        $articles = Article::get();
+        /*$articles = Article::get();
         foreach ($articles->tags as $tag) {
             echo $tag->pivot->name;
-        }
-        return view('articles.index')->with('articles',$articles)->with('tags',$tags);//->with('images',$images);
+        }*/
+        return view('articles.index')->with('articles',$articles);//->with('tags',$tags);//->with('images',$images);
     }
 
     /**
@@ -42,7 +42,8 @@ class ArticlesController extends Controller
      */
     public function create() // liés les tags
     {
-        return view ('articles.create');
+        $tags = Tag::all();
+        return view ('articles.create')->with('tags',$tags);
     }
 
     /**
@@ -51,7 +52,7 @@ class ArticlesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) // enregistrer les tags
+    public function store(Request $request)
     {
         $this->validate($request, [
             'title' => 'required',
@@ -88,7 +89,8 @@ class ArticlesController extends Controller
     public function show($id) // voir les tags
     {
         $articles = Article::find($id);
-        return view ('articles.show')->with('articles',$articles);
+        $tags = Tag::find($id);
+        return view ('articles.show')->with('articles',$articles)->with('tags',$tags);
     }
 
     /**
@@ -100,11 +102,12 @@ class ArticlesController extends Controller
     public function edit($id) // modifier les tags
     {
         $articles = Article::find($id);
+        $tag = Tag::find($id);
 
         //Check correct users
 
         if(auth()->user()->role !== 1){
-            return redirect ('/articles')->with('error','You are not authorized !');
+            return redirect ('/articles')->with('error','You are not authorized !')->with('tags',$tags);
         }
 
         return view ('articles.edit')->with('articles',$articles);
