@@ -26,6 +26,4 @@ Route::get('/dashboard', 'DashboardController@index');
 
 Route::get('profile','UserController@index');
 
-Route::get('/autocomplete',function(){
-    return view('autocomplete.index');
-});
+Route::resource('tags', 'TagController');

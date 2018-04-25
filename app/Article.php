@@ -11,4 +11,5 @@ class Article extends Model
         return $this->belongsToMany('App\Tag', 'article_tag', 'articles_id', 'tags_id');
     }
 
+    
 }
