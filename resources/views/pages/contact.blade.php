@@ -1,9 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<br>
-<br>
-<br>
     <h1 class="text-center">Contact me </h1>
     <form class="jumbotron  form-control" method="post" action="https://formspree.io/pradonbenjamin@gmail.com"id="my-form-element" cf-form>
       <fieldset class="for-control">

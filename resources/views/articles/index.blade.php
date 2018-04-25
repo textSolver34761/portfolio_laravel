@@ -1,9 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<br>
-<br>
-<br>
     <h1 class="text-center"> Welcome to my blog ! </h1>
     @if(!Auth::guest())
         @if(Auth::user()->role == 1)
@@ -12,16 +9,15 @@
     @endif
         @if(count($articles) >0 )
             @foreach($articles as $article)
-                <div class="well jumbotron">
+                <div class="jumbotron">
                     <h3>{{$article->title}}</h3>
                     <description>
                         <a href="/articles/{{$article->id}}"> {{$article ->description}} </a>
                     </description> <br>
                     <small> written on {{$article ->created_at}} </small>
-                        <p>{{$article->tag->name}}</p> <!--utilisation de la table de jointure pour afficher un tag par article -->
-                    @endforeach
+                    <p>{{$article->tags}}</p> <!--utilisation de la table de jointure pour afficher un tag par article -->
                 </div>
-                <br>
+            @endforeach
             {{$articles->links()}}
         @else
         <p> No articles found </p>

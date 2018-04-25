@@ -7,7 +7,7 @@
     <a href="/articles" class="btn btn-primary">Go back</a>
     @if(!Auth::guest())
         @if(Auth::user()->role == 1)
-            <a href="/articles/{{$articles->id}}/edit" class="btn btn-default">Edit</a>
+            <a href="/articles/{{$articles->id}}/edit" class="btn btn-primary">Edit</a>
             {!!Form::open(['action'=>['ArticlesController@destroy',$articles->id],'method' => 'post', 'class' => 'pull-right'])!!}
                 {{Form::hidden('_method','delete')}}
                 {{Form::submit('Delete',['class'=> 'btn btn-danger'])}}
