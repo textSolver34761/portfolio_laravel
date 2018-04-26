@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
 
-    public function tag(){
-        return $this->belongsToMany('App\Tag')->using('App\ArticleTag');
+    public function tags(){
+        return $this->belongsToMany('App\Tag', 'article_tag', 'articles_id', 'tags_id');
     }
 
+    
 }

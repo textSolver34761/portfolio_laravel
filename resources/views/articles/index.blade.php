@@ -12,16 +12,14 @@
     @endif
         @if(count($articles) >0 )
             @foreach($articles as $article)
-                <div class="well jumbotron">
-                    <h3>{{$article ->title}}</h3>
-                    <description> <a href="/articles/{{$article->id}}"> {{$article ->description}} </a> </description> <br>
-                    <small> written on {{$article ->created_at}} </small>
-                    @endforeach
-                    @foreach($tags as $tag)
-                        <p>{{$tag->name}}</p>
-                    @endforeach
+                <div class="jumbotron">
+                    <h3>{{$article->title}}</h3>
+                    <description>
+                        <a href="/articles/{{$article->id}}"> {{$article ->description}} </a>
+                    </description> <br>
+                    <small> written on {{$article ->created_at}} </small>                    
                 </div>
-                <br>
+            @endforeach
             {{$articles->links()}}
         @else
         <p> No articles found </p>

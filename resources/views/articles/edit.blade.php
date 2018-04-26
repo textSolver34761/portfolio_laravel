@@ -17,22 +17,25 @@
     </div>
 
     <div class="form-group">
-            {{Form::label('content','Content')}}
-            {{Form::textarea('content',$articles->content,['id'=>'article-ckeditor', 'class'=> 'form-control','placeholder'=> 'Content'])}}
+        {{Form::label('tags', 'Tags:', ['class' => 'form-spacing-top'])}}
+        {{Form::select('tags[]', $tags, null, ['class' => 'form-control select2-multi', 'multiple' => 'multiple' ])}}
     </div>
-
+    
     <div class="form-group">
-            <label for="tag">Tag</label> <br>
-            <select name="tag" id="tag">
-                @foreach($tags as $tag)
-                    <option value={{$tag->id}}>
-                            {{$tag->tag}}
-                    </option>
-                @endforeach
-            </select>
-        </div>
-
+            {{Form::label('content','Content')}}
+            {{Form::textarea('content',$articles->content,['class'=> 'form-control','placeholder'=> 'Content'])}}
+    </div>
+    
     {{Form::hidden('_method','PUT')}}
     {{Form::submit('submit',['class'=> 'btn btn-primary'])}}
     {!! Form::close() !!}
 @endsection
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.select2-multi').select2();
+        $('.select2-multi').select2().val( {!! json_encode( $articles->tags()->pluck('tags_id')->toArray()) !!} ).trigger('change');
+            //
+        }
+    });
+</script>

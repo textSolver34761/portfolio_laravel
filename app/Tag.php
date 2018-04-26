@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tag extends Model
 {
-    public function article(){
-        return $this->belongsToMany('App\Article')->using('App\ArticleTag');
+    public function articles(){
+        return $this->belongsToMany('App\Article', 'article_tag', 'tags_id', 'articles_id');
     }
 
-    public function project(){
-        return $this->belongsToMany('App\Project')->using('App\ProjectTag');
+    public function projects(){
+        return $this->belongsToMany('App\Project','project_tag','tags_id','projects_id');
     }
 }

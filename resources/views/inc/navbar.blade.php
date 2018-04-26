@@ -46,7 +46,8 @@
                                              document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-
+                            <a href="#" class="fa fa-btn fa-user text-black"> User Profile </a> <br>
+                            <a href="{{route('tags.index')}}" class="fa fa-hashtag text-center">Tags</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>

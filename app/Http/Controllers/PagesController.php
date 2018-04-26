@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-//use App\ImageProject;
 use App\Tag;
 use App\Project;
 use App\ProjectTags;

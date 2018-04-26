@@ -25,14 +25,10 @@ class ArticlesController extends Controller
      */
     public function index()//voir les tags
     {
+        
         $articles = Article::orderBy('created_at','desc')->paginate(5);
-        //$tags = Tag::get();
-       
-        /*$articles = Article::get();
-        foreach ($articles->tags as $tag) {
-            echo $tag->pivot->name;
-        }*/
-        return view('articles.index')->with('articles',$articles);//->with('tags',$tags);//->with('images',$images);
+        $tags = Tag::all();
+        return view('articles.index')->with('articles',$articles)->with('tags',$tags);
     }
 
     /**
@@ -52,40 +48,23 @@ class ArticlesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request) // enregistrer les tags
     {
         $this->validate($request, [
             'title' => 'required',
             'description' => 'required',
             'content' => 'required',
-            'image' => 'image|nullable|max:10999'
+
         ]);
-
-        // Handle File img
-
-        if($request-> hasFile('image')){
-            //Get Filename w/ extention
-            $filenamewithExtention = $request->file('image')->getClientOriginalName();
-            //Get filename
-            $filename = pathinfo($filenamewithExtention, PATHINFO_FILENAME);
-            //Get extention
-            $extention = $request->file('image')->getClientOriginalExtension();
-            // File name to store
-            $fileNameToStore = $filename.'_'.time();'.'.$extention;
-            //Uplad img
-            $path = $request->file('image')->storeAs('public/image', $fileNameToStore);
-        } else{
-            $NameToStore ='default.jpg';
-        }
-
 
         //Save Article newly created
         $articles = new Article;
         $articles->title = $request->input('title');
         $articles->description = $request->input('description');
         $articles->content = $request->input('content');
-        $articles->image = $fileNameToStore;
         $articles->save();
+
+        $articles->tags()->sync($request->tags,false);
 
         return redirect('/articles')->with('success','You have successfully created an article!');
     }
@@ -96,11 +75,10 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id) // voir les tags
+    public function show($id)
     {
         $articles = Article::find($id);
-        $tags = Tag::find($id);
-        return view ('articles.show')->with('articles',$articles)->with('tags',$tags);
+        return view ('articles.show')->with('articles',$articles);
     }
 
     /**
@@ -112,15 +90,18 @@ class ArticlesController extends Controller
     public function edit($id) // modifier les tags
     {
         $articles = Article::find($id);
-        $tag = Tag::find($id);
-
+        $tags = Tag::all();
+        $tags2 = array();
+        foreach($tags as $tag){
+            $tags2[$tag->id] = $tag->name;
+        }
         //Check correct users
 
         if(auth()->user()->role !== 1){
-            return redirect ('/articles')->with('error','You are not authorized !')->with('tags',$tags);
+            return redirect ('/articles')->with('error','You are not authorized !');
         }
 
-        return view ('articles.edit')->with('articles',$articles);
+        return view ('articles.edit')->with('articles',$articles)->with('tags',$tags2);
     }
 
     /**
@@ -144,6 +125,12 @@ class ArticlesController extends Controller
         $articles->content = $request->input('content');
         $articles->save();
 
+        if(isset($request->tags)){
+            $articles->tags()->sync($request->tags);
+        }else{
+            $articles->tags()->sync(array());
+        }
+
         return redirect('/articles')->with('success','You have successfully updated an article!');
     }
 
@@ -156,14 +143,17 @@ class ArticlesController extends Controller
     public function destroy($id) // detruire les tags
     {
         $articles = Article::find($id);
+        $articles->tags()->detach();
 
         //Check correct users
 
-        if(auth()->user()->id !== $articles->user_id){
+        if(auth()->user()->role !== 1){
             return redirect ('/articles')->with('error','You are not authorized !');
         }
 
         $articles->delete();
         return redirect('/articles')->with('success','You have successfully deleted an article!');
+
+
     }
 }
