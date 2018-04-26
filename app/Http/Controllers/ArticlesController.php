@@ -75,7 +75,7 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id) // voir les tags
+    public function show($id)
     {
         $articles = Article::find($id);
         return view ('articles.show')->with('articles',$articles);
@@ -143,14 +143,17 @@ class ArticlesController extends Controller
     public function destroy($id) // detruire les tags
     {
         $articles = Article::find($id);
+        $articles->tags()->detach();
 
         //Check correct users
 
-        if(auth()->user()->id !== $articles->user_id){
+        if(auth()->user()->role !== 1){
             return redirect ('/articles')->with('error','You are not authorized !');
         }
 
         $articles->delete();
         return redirect('/articles')->with('success','You have successfully deleted an article!');
+
+
     }
 }

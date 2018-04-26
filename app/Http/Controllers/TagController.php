@@ -51,7 +51,8 @@ class TagController extends Controller
      */
     public function show($id)
     {
-        //
+        $tag = Tag::find($id);
+        return view('tags.show')->with('tag',$tag);
     }
 
     /**
@@ -62,7 +63,8 @@ class TagController extends Controller
      */
     public function edit($id)
     {
-        //
+        $tag = Tag::find($id);
+        return view('tags.edit')->with('tag',$tag);
     }
 
     /**
@@ -74,7 +76,14 @@ class TagController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $tag = Tag::find($id);
+        $this->validate($request,['name' => 'required|max:190']);
+        $tag->name = $request->name;
+        $tag->save();
+
+        Session::flash('success','you have successfully saved your new tag!');
+
+        return redirect()->route('tags.show', $tag->id);
     }
 
     /**
@@ -85,6 +94,13 @@ class TagController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $tag = Tag::find($id);
+        $tag->articles()->detach();
+
+        $tag->delete();
+
+        Session::flash('Success','The tag was successfully deleted!');
+
+        return redirect()->route('tags.index');
     }
 }
