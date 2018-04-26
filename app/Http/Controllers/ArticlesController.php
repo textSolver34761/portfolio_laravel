@@ -54,6 +54,7 @@ class ArticlesController extends Controller
             'title' => 'required',
             'description' => 'required',
             'content' => 'required',
+
         ]);
 
         //Save Article newly created
@@ -62,6 +63,8 @@ class ArticlesController extends Controller
         $articles->description = $request->input('description');
         $articles->content = $request->input('content');
         $articles->save();
+
+        $articles->tags()->sync($request->tags,false);
 
         return redirect('/articles')->with('success','You have successfully created an article!');
     }
@@ -87,14 +90,18 @@ class ArticlesController extends Controller
     public function edit($id) // modifier les tags
     {
         $articles = Article::find($id);
-
+        $tags = Tag::all();
+        $tags2 = array();
+        foreach($tags as $tag){
+            $tags2[$tag->id] = $tag->name;
+        }
         //Check correct users
 
         if(auth()->user()->role !== 1){
             return redirect ('/articles')->with('error','You are not authorized !');
         }
 
-        return view ('articles.edit')->with('articles',$articles);
+        return view ('articles.edit')->with('articles',$articles)->with('tags',$tags2);
     }
 
     /**

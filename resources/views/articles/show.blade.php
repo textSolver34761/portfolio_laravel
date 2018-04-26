@@ -16,6 +16,11 @@
     @endif
     <h1>{{$articles->title}}</h1>
     <small> written on {{$articles->created_at }}</small>
+    <div class="tag">
+        @foreach($articles->tags as $tag)
+            <span class="label label-primary">{{$tag->name}}</span>
+        @endforeach
+    </div>
     <br>
     <br>
     <div>
