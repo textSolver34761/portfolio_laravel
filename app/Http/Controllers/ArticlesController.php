@@ -125,6 +125,12 @@ class ArticlesController extends Controller
         $articles->content = $request->input('content');
         $articles->save();
 
+        if(isset($request->tags)){
+            $articles->tags()->sync($request->tags);
+        }else{
+            $articles->tags()->sync(array());
+        }
+
         return redirect('/articles')->with('success','You have successfully updated an article!');
     }
 
