@@ -21,7 +21,7 @@
             <div class="col-sm-3 myCols">
                 <h5 class="text-center">Legal</h5>
                 <ul class="text-center list-unstyled">
-                    <li class="text-white"><a href="/termsconditions">Terms of Conditions</a></li>
+                    <li class="text-white"><a href="/termsconditions">Terms and Conditions</a></li>
                 </ul>
             </div>
         </div>
