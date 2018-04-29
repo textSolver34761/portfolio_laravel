@@ -1,26 +1,44 @@
-<footer class="footer bg-dark p-5 text-white navbar-fixed-bottom">
+<footer class="footer bg-dark p-5 text-white">
     <div class="container">
-        <p class="text-center">Follow me on social networks:</p>
         <div class="row">
-            <div class="col-sm">
-                <a class="nav-link  text-white" href="https://www.twitter.com/benjamin_pradon" target="_blank">My Twitter account</a>
-            </div>
-            
-            <div class="col-sm">
-                <a class="nav-link text-white" href="https://www.linkedin.com/in/benjaminpradon/" target="_blank">My LinkedIn</a>
+            <div class="col-sm-4">
+                <h5 class="text-center">Get started</h5>
+                <ul class="text-center list-unstyled">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/register">Sign up</a></li>
+                </ul>
             </div>
 
-            <div class="col-sm">
-                <a class="nav-link text-white" href="https://github.com/textSolver34761" target="_blank">My Github deposit</a>
+            <div class="col-sm-3 myCols">
+                <h5 class="text-center">About</h5>
+                <ul class="text-center list-unstyled">
+                    <li class="text-white"><a href="/about">About me</a></li>
+                    <li class="text-white"><a href="/contact">Contact me</a></li>
+                    <li class="text-white"> <a href="https://landbot.io/u/H-27113-GJVK3FFB9B71354C/index.html"> Chat with me</a></li>
+                </ul>
             </div>
-        
-            <div class="col-sm">
-                <a class="nav-link text-white" href="/contact">Contact me</a>
+
+            <div class="col-sm-3 myCols">
+                <h5 class="text-center">Legal</h5>
+                <ul class="text-center list-unstyled">
+                    <li class="text-white"><a href="/termsconditions">Terms of Conditions</a></li>
+                </ul>
             </div>
         </div>
         <br>
-        <br>
-        <a class="nav-link text-white text-center" href="/termsconditions">Here are the Terms and Conditions of my site</a>. <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <a class="nav-link twitter text-white" href="https://www.twitter.com/benjamin_pradon" target="_blank">My Twitter account <i class="fa fa-twitter"></i></a>
+            </div>
+            
+            <div class="col-sm-3">
+                <a class="nav-link linkedin text-white" href="https://www.linkedin.com/in/benjaminpradon/" target="_blank">My LinkedIn account <i class="fa fa-linkedin"></i></a>
+            </div>
+
+            <div class="col-sm-3">
+                <a class="nav-link text-white github" href="https://github.com/textSolver34761" target="_blank">My Github deposit <i class="fa fa-github"></i></a>
+            </div>
+        </div>
         <br>
         <p class="text-center">&copy; Benjamin Pradon - <?php echo date("Y");?>, all rights reserved </p>
     </div>
