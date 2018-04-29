@@ -1,7 +1,7 @@
 <footer class="footer bg-dark p-5 text-white">
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <h5 class="text-center">Get started</h5>
                 <ul class="text-center list-unstyled">
                     <li><a href="/">Home</a></li>
@@ -24,22 +24,15 @@
                     <li class="text-white"><a href="/termsconditions">Terms and Conditions</a></li>
                 </ul>
             </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-sm-4">
-                <a class="nav-link twitter text-white" href="https://www.twitter.com/benjamin_pradon" target="_blank">My Twitter account <i class="fa fa-twitter"></i></a>
-            </div>
-            
             <div class="col-sm-3">
-                <a class="nav-link linkedin text-white" href="https://www.linkedin.com/in/benjaminpradon/" target="_blank">My LinkedIn account <i class="fa fa-linkedin"></i></a>
-            </div>
-
-            <div class="col-sm-3">
-                <a class="nav-link text-white github" href="https://github.com/textSolver34761" target="_blank">My Github deposit <i class="fa fa-github"></i></a>
+                <h5 class="text-center">Social Network</h5>
+                <ul class="text-center list-unstyled">
+                    <a class="nav-link twitter text-white" href="https://www.twitter.com/benjamin_pradon" target="_blank">My Twitter account <i class="fa fa-twitter"></i></a>
+                    <a class="nav-link linkedin text-white" href="https://www.linkedin.com/in/benjaminpradon/" target="_blank">My LinkedIn account <i class="fa fa-linkedin"></i></a>
+                    <a class="nav-link text-white github" href="https://github.com/textSolver34761" target="_blank">My Github deposit <i class="fa fa-github"></i></a>
+                </ul>
             </div>
         </div>
-        <br>
         <p class="text-center">&copy; Benjamin Pradon - <?php echo date("Y");?>, all rights reserved </p>
     </div>
 </footer>

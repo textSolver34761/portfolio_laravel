@@ -10011,6 +10011,14 @@ a.text-dark:focus {
   color: black;
 }
 
+.cookie-consent {
+  background-color: yellow;
+}
+
+.cookie-consent__agree {
+  background-color: green;
+}
+
 .donneespersonnelles {
   font-size: 55px;
   background-color: yellow;
