@@ -17,7 +17,12 @@
                     <description>
                         <a href="/articles/{{$article->id}}"> {{$article ->description}} </a>
                     </description> <br>
-                    <small> written on {{$article ->created_at}} </small>                    
+                    <small> written on {{$article ->created_at}} </small>
+                    <div class="tag"> <br>
+                        @foreach($article->tags as $tag)
+                            <span class="label label-primary">{{$tag->name}}</span>
+                        @endforeach
+                    </div>
                 </div>
             @endforeach
             {{$articles->links()}}
