@@ -12,28 +12,28 @@
         <div class="carousel-inner text-center" role="listbox">
             <div class="carousel-item active">
                 <h2>{{$project->name}}</h2>
-                <img class="d-block w-100 img-fluid" src="{{asset('Caroussel/laravel.png')}}" height="150" width="150">
+                <img class="img-fluid" src="{{asset('Caroussel/laravel.png')}}" height="150" width="150">
                 <p>{{$project->description}}</p>
                 <!--TAGS-->
             </div>
 
             <div class="carousel-item">
                     <h2>{{$project->name}}</h2>
-                    <img class="d-block w-100 img-fluid" src="{{asset('Caroussel/chatbot.png')}}" height="150" width="150">
+                    <img class="img-fluid" src="{{asset('Caroussel/chatbot.png')}}" height="150" width="150">
                     <p>{{$project->description}}</p>
                     <!--TAGS-->
             </div>
 
             <div class="carousel-item">
                     <h2>{{$project->name}}</h2>
-                    <img class="d-block w-100 img-fluid" src="{{asset('Caroussel/iot.png')}}" height="150" width="150">
+                    <img class="img-fluid" src="{{asset('Caroussel/iot.png')}}" height="150" width="150">
                     <p>{{$project->description}}</p>
                     <!--TAGS-->
             </div>
 
             <div class="carousel-item">
                     <h2>{{$project->name}}</h2>
-                    <img class="d-block w-100 img-fluid" src="{{asset('Caroussel/php.png')}}" height="150" width="150">
+                    <img class="img-fluid" src="{{asset('Caroussel/php.png')}}" height="150" width="150">
                     <p>{{$project->description}}</p>
                     <!--TAGS-->
             </div>
@@ -51,3 +51,4 @@
     </a>
 </div> 
 @endsection
+
