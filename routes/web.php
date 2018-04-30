@@ -27,3 +27,5 @@ Route::get('/dashboard', 'DashboardController@index');
 Route::get('profile','UserController@index');
 
 Route::resource('tags', 'TagController');
+
+Route::resource('projects', 'ProjectController');

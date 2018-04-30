@@ -1,9 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<br>
-<br>
-<br>
     <a href="/articles" class="btn btn-primary">Go back</a>
     @if(!Auth::guest())
         @if(Auth::user()->role == 1)
@@ -16,7 +13,7 @@
     @endif
     <h1>{{$articles->title}}</h1>
     <small> written on {{$articles->created_at }}</small>
-    <div class="tag">
+    <div class="tag"> <br>
         @foreach($articles->tags as $tag)
             <span class="label label-primary">{{$tag->name}}</span>
         @endforeach

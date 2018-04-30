@@ -10011,13 +10011,36 @@ a.text-dark:focus {
   color: black;
 }
 
+.cookie-consent {
+  background-color: yellow;
+}
+
+.cookie-consent__agree {
+  background-color: green;
+}
+
 .donneespersonnelles {
   font-size: 55px;
+  background-color: yellow;
 }
 
 .avertissement {
   font-size: 32px;
   font-style: italic;
+  background-color: yellow;
+}
+
+.label-default {
+  color: gray;
+  border-radius: 10px;
+}
+
+.label {
+  color: black;
+  border-radius: 10px 0;
+  border: 1px solid black;
+  padding: 5px;
+  background-color: gray;
 }
 
 .navbar-laravel {

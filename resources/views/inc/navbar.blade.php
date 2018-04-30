@@ -36,7 +36,7 @@
                     <li><a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                 @else
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->first_name.' '.Auth::user()->name }}<span class="caret"></span>
                         </a>
 
@@ -46,7 +46,7 @@
                                              document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-                            <a href="#" class="fa fa-btn fa-user text-black"> User Profile </a> <br>
+                            <!--a href="#" class="fa fa-btn fa-user text-black"> User Profile </a> <br-->
                             <a href="{{route('tags.index')}}" class="fa fa-hashtag text-center">Tags</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf

@@ -1,8 +1,5 @@
 @extends('layouts.app')
 @section('content')
-<br>
-<br>
-<br>
     <h1 class="text-center">You whant to know more about me?</h1> <br>
         <h2 class="text-center"> You are on the right place! </h2>
         <br>

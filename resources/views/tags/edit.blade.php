@@ -1,8 +1,5 @@
 @extends('layouts.app')
 @section('content')
-<br>
-<br>
-<br>
 <title></title>
     <div class="form-group">
         {{Form::model($tag,['route' => ['tags.update', $tag->id], 'method' => 'PUT'])}}

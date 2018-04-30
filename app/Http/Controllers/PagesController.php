@@ -49,10 +49,10 @@ class PagesController extends Controller
         $projectiot = Project::find(1);
         $projectnatif = Project::find(4);
 
-        $taglaravel = Tag::find(1);
+        $taglaravel = Tag::find(3);
         $tagchatbot = Tag::find(2);
-        $tagiot = Tag::find(3);
-        $tagnatif = Tag::find(4);
+        $tagiot = Tag::find(4);
+        $tagnatif = Tag::find(5);
 
         $laravel = array(
             'name'=>$projectlaravel->name,

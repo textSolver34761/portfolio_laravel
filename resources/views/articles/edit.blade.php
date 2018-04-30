@@ -1,9 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<br>
-<br>
-<br>
     <h1>Edit the article</h1>
     {!! Form::open(['action' => ['ArticlesController@update', $articles->id], 'method' => 'post'] ) !!}
     <div class="form-group">
