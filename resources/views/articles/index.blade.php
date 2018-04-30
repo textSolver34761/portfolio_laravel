@@ -1,9 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<br>
-<br>
-<br>
     <h1 class="text-center"> Welcome to my blog ! </h1>
     @if(!Auth::guest())
         @if(Auth::user()->role == 1)

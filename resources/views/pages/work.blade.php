@@ -1,8 +1,5 @@
 @extends('layouts.app')
 @section('content')
-<br>
-<br>
-<br>
 <title>{{$title}}</title>
         <h1 class="text-center">This is my work:</h1>
         <br>
@@ -14,28 +11,28 @@
             <h2>{{$laravel['name']}}</h2>
             <img class="d-block w-100 img-fluid" src="{{asset('Caroussel/laravel.png')}}" height="150" width="150">
             <p>{{$laravel['description']}}</p>
-            <p>{{$laravel['name']}}</p>
+            <span class="label label-default">{{$laravel['name']}}</span>
         </div>
 
         <div class="carousel-item">
                 <h2>{{$chatbot['name']}}</h2>
                 <img class="d-block w-100 img-fluid" src="{{asset('Caroussel/chatbot.png')}}" height="150" width="150">
                 <p>{{$chatbot['description']}}</p>
-                <p>{{$chatbot['name']}}</p>
+                <span class="label label-default">{{$chatbot['name']}}</span>
         </div>
 
         <div class="carousel-item">
                 <h2>{{$iot['name']}}</h2>
                 <img class="d-block w-100 img-fluid" src="{{asset('Caroussel/iot.png')}}" height="150" width="150">
                 <p>{{$iot['description']}}</p>
-                <p>{{$iot['name']}}</p>
+                <span class="label label-default">{{$iot['name']}}</span>
         </div>
 
         <div class="carousel-item">
                 <h2>{{$natif['name']}}</h2>
                 <img class="d-block w-100 img-fluid" src="{{asset('Caroussel/php.png')}}" height="150" width="150">
                 <p>{{$natif['description']}}</p>
-                <p>{{$natif['name']}}</p>
+                <span class="label label-default">{{$natif['name']}}</span>
         </div>
 
     </div>

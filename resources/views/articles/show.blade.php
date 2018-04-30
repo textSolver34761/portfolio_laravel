@@ -1,9 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<br>
-<br>
-<br>
     <a href="/articles" class="btn btn-primary">Go back</a>
     @if(!Auth::guest())
         @if(Auth::user()->role == 1)

@@ -1,9 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<br>
-<br>
-<br>
     <h1>Create an article</h1>
     {!! Form::open(['action' => 'ArticlesController@store', 'method'=>'post','files' => true]) !!}
     <div class="form-group">
