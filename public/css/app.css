@@ -10043,6 +10043,11 @@ a.text-dark:focus {
   background-color: gray;
 }
 
+.white a {
+  color: white;
+  text-decoration: none;
+}
+
 .navbar-laravel {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);

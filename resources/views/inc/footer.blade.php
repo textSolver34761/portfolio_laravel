@@ -1,5 +1,5 @@
 <footer class="footer bg-dark p-5 text-white">
-    <div class="container">
+    <div class="container white">
         <div class="row">
             <div class="col-sm-3">
                 <h5 class="text-center">Get started</h5>
