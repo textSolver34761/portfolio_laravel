@@ -28,3 +28,12 @@
     {{Form::submit('submit',['class'=> 'btn btn-primary'])}}
     {!! Form::close() !!}
 @endsection
+<script>
+$(document).ready(function() {
+    $('select2-multi').select2();
+});
+$('select2-multi').select2({
+    placeholder: 'Select the tag(s)',
+    allowClear: true
+  });
+</script>
