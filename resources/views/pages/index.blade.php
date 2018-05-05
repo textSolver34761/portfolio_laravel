@@ -1,14 +1,14 @@
 @extends('layouts.app')
 @section('content')
+<br><br>
 <title></title>
 
 <div class="jumbotron">
 <h1 class="text-center">Welcome on my personal website</h1>
-<br>
     <div class="content">
         <a class="header">Hi, I'm Benjamin Pradon</a>
         <div class="description">
-            <img src="{{asset('Avatar/PhotoID.jpg')}}" height="150" width="150">
+            <img src="{{asset('Avatar/PhotoID.jpg')}}" height="156" width="100">
             <p>
                 This is my personal website. <br>
                 I am a web developer. If you want to know more about me, you'll find more information <a href="/about"> here</a>.<br>
