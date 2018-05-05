@@ -26,7 +26,7 @@ class ArticlesController extends Controller
     public function index()//voir les tags
     {
         
-        $articles = Article::orderBy('created_at','desc')->paginate(5);
+        $articles = Article::orderBy('created_at','desc')->paginate(8);
         $tags = Tag::all();
         return view('articles.index')->with('articles',$articles)->with('tags',$tags);
     }
