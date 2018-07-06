@@ -10,145 +10,56 @@
 
             </tr>
         <tr>
-            <th>Months</th>
-            <th>Earnings</th>
+            <th>Date</th>
+            <th>Wording</th>
+            <th>Debit</th>
+            <th>Credit</th>
+            <th>Balance</th>
         </tr>
 
         <tr>
-            <td>January 2018</td>
-            <td>0,00€</td>
-        </tr>
-        
-        <tr>
-            <td>February 2018</td>
-            <td>0,00€</td>
+            <td>06/07/18</td>
+            <td>Purchaise 3D printer</td>
+            <td></td>
+            <td>-500 €</td>
+            <td>-500 €</td>
         </tr>
 
         <tr>
-            <td>March 2018</td>
-            <td>0,00€</td>
-        </tr>
-        
-        <tr>
-            <td>April 2018</td>
-            <td>0,00€</td>
-        </tr>
-
-        <tr>
-            <td>May 2018</td>
-            <td>0,00€</td>
-        </tr>
-
-        <tr>
-            <td>June 2018</td>
-            <td>0,00€</td>
-        </tr>
-
-        <tr>
-            <td>Jully 2018</td>
-            <td>0,00€</td>
-        </tr>
-
-        <tr>
-            <td>August 2018</td>
-            <td>0,00€</td>
-        </tr>
-
-        <tr>
-            <td>Sept. 2018</td>
-            <td>0,00€</td>
-        </tr>
-
-        <tr>
-            <td>Nov. 2018</td>
-            <td>0,00€</td>
-        </tr>
-
-        <tr>
-            <td>Dec. 2018</td>
-            <td>0,00€</td>
-        </tr>
-
-        <tr>
-            <td>Total 2018 :</td>
-            <td>0,00€</td>
+            <td>16/08/18</td>
+            <td>Purchaise software 3D printer</td>
+            <td></td>
+            <td>-400 €</td>
+            <td>-900 €</td>
         </tr>
     </table>
 </div>
-&nbsp &nbsp&nbsp
+<br><br> <br>
 <div class="tableaux text-center">
-    <table>
+        <table>
+                <tr>
+                    <th>
+                        Idea 2
+                    </th>
+    
+                </tr>
             <tr>
-                <th>
-                    Idea 2
-                </th>
+                <th>Date</th>
+                <th>Wording</th>
+                <th>Debit</th>
+                <th>Credit</th>
+                <th>Balance</th>
             </tr>
-        <tr>
-            <th>Months</th>
-            <th>Earnings</th>
-        </tr>
-
-        <tr>
-            <td>January 2018</td>
-            <td>0,00€</td>
-        </tr>
-        
-        <tr>
-            <td>February 2018</td>
-            <td>0,00€</td>
-        </tr>
-
-        <tr>
-            <td>March 2018</td>
-            <td>0,00€</td>
-        </tr>
-        
-        <tr>
-            <td>April 2018</td>
-            <td>0,00€</td>
-        </tr>
-
-        <tr>
-            <td>May 2018</td>
-            <td>0,00€</td>
-        </tr>
-
-        <tr>
-            <td>June 2018</td>
-            <td>0,00€</td>
-        </tr>
-
-        <tr>
-            <td>Jully 2018</td>
-            <td>0,00€</td>
-        </tr>
-
-        <tr>
-            <td>August 2018</td>
-            <td>0,00€</td>
-        </tr>
-
+    
             <tr>
-                <td>Sept. 2018</td>
-                <td>0,00€</td>
+                <td>15/06/18</td>
+                <td>Purchaise of a book "Concevez des applications avec React Native. <br>
+                Développement, publications sur les stores et stratégies marketing." </td>
+                <td></td>
+                <td>-50 €</td>
+                <td>-50 €</td>
             </tr>
-
-            <tr>
-                <td>Nov. 2018</td>
-                <td>0,00€</td>
-            </tr>
-
-            <tr>
-                <td>Dec. 2018</td>
-                <td>0,00€</td>
-            </tr> 
-            <tr>
-            <tr>
-                <td>Total 2018 :</td>
-                <td>0,00€</td>
-            </tr>
-    </table>
-</div>
+        </table>
 @endsection
 <style>
 table, th, td {
@@ -157,8 +68,5 @@ table, th, td {
 .tableaux{
     display:inline-block;
     vertical-align:top;
-}
-table{
-margin:auto;
 }
 </style>
