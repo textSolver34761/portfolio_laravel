@@ -53,20 +53,25 @@
             <td>0,00€</td>
         </tr>
 
-            <tr>
-                <td>Sept. 2018</td>
-                <td>0,00€</td>
-            </tr>
+        <tr>
+            <td>Sept. 2018</td>
+            <td>0,00€</td>
+        </tr>
 
-            <tr>
-                <td>Nov. 2018</td>
-                <td>0,00€</td>
-            </tr>
+        <tr>
+            <td>Nov. 2018</td>
+            <td>0,00€</td>
+        </tr>
 
-            <tr>
-                <td>Dec. 2018</td>
-                <td>0,00€</td>
-            </tr> 
+        <tr>
+            <td>Dec. 2018</td>
+            <td>0,00€</td>
+        </tr>
+
+        <tr>
+            <td>Total 2018 :</td>
+            <td>0,00€</td>
+        </tr>
     </table>
 </div>
 &nbsp &nbsp&nbsp
@@ -136,6 +141,11 @@
                 <td>Dec. 2018</td>
                 <td>0,00€</td>
             </tr> 
+            <tr>
+            <tr>
+                <td>Total 2018 :</td>
+                <td>0,00€</td>
+            </tr>
     </table>
 </div>
 @endsection
@@ -146,5 +156,8 @@ table, th, td {
 .tableaux{
     display:inline-block;
     vertical-align:top;
-  }
+}
+table{
+margin:auto;
+}
 </style>
