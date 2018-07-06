@@ -1,5 +1,7 @@
+@extends('layouts.app')
+@section('content')
 <h1 class="text-center">Accountancy</h1>
-<div class="tableaux">
+<div class="tableaux text-center">
     <table>
             <tr>
                 <th>
@@ -62,12 +64,13 @@
             </tr>
 
             <tr>
-                <td>Dece. 2018</td>
+                <td>Dec. 2018</td>
                 <td>0,00€</td>
             </tr> 
     </table>
 </div>
-<div class="tableaux">
+&nbsp &nbsp&nbsp
+<div class="tableaux text-center">
     <table>
             <tr>
                 <th>
@@ -130,11 +133,12 @@
             </tr>
 
             <tr>
-                <td>Dece. 2018</td>
+                <td>Dec. 2018</td>
                 <td>0,00€</td>
             </tr> 
     </table>
 </div>
+@endsection
 <style>
 table, th, td {
     border: 1px solid black;
