@@ -30,6 +30,15 @@ class PagesController extends Controller
         return view('pages.blog')->with('title',$title);
     }
     
+    public function businesses(){
+        $title = 'Welcome to my online businesses';
+        return view('pages.businesses')->with('title',$title);
+    }
+
+    public function accountancy(){
+        $title = 'Welcome my business accountancy';
+        return view('pages.accountancy')->with('title',$title);
+    }
     
     public function work(){
         $title = 'This is my work:';

@@ -17,6 +17,8 @@ Route::get('/contact', 'PagesController@contact');
 Route::get('/work', 'PagesController@work');
 Route::get('/cgu','PagesController@cgu');
 Route::get('/termsconditions','PagesController@tc');
+Route::get('/businesses', 'PagesController@businesses');
+Route::get('/accountancy','PagesController@accountancy');
 
 Route::resource('articles', 'ArticlesController');
 

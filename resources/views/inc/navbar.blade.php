@@ -28,6 +28,13 @@
                   <a class="nav-link text-white" href="/work">My work</a>
             </li>
 
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">My online businesses</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/businesses">Online businesses</a>
+                    <a class="dropdown-item" href="/accountancy">My business accountancy</a>
+                </div>
+            </li>
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->

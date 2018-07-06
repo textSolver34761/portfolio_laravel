@@ -2,7 +2,7 @@
 
 @section('content')
     <h1 class="text-center">Contact me </h1>
-    <form class="jumbotron  form-control" method="post" action="https://formspree.io/pradonbenjamin@gmail.com"id="my-form-element" cf-form>
+    <form class="jumbotron  form-control" method="post" action="https://formspree.io/infor.benjaminpradon@gmail.com"id="my-form-element" cf-form>
       <fieldset class="for-control">
         <label for="name">What's your name?*</label> <br>
         <input required cf-questions="Hi there! What's your name? 😊" type="text" class="form-control" name="name" id="name" />
