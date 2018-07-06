@@ -7,6 +7,7 @@
                 <th>
                     Idea 1
                 </th>
+                
             </tr>
         <tr>
             <th>Months</th>
