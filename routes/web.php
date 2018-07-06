@@ -19,6 +19,8 @@ Route::get('/cgu','PagesController@cgu');
 Route::get('/termsconditions','PagesController@tc');
 Route::get('/businesses', 'PagesController@businesses');
 Route::get('/accountancy','PagesController@accountancy');
+Route::get('/fjanuary','PagesController@january');
+Route::get('/sjanuary','PagesController@january2');
 
 Route::resource('articles', 'ArticlesController');
 

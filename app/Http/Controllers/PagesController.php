@@ -39,7 +39,7 @@ class PagesController extends Controller
         $title = 'Welcome my business accountancy';
         return view('pages.accountancy')->with('title',$title);
     }
-    
+
     public function work(){
         $title = 'This is my work:';
 
